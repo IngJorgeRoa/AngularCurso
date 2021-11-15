@@ -1,0 +1,25 @@
+<p>listado works!</p>
+
+<!--directivas para cambiar y manipular el DOM de una manera facil-->
+
+
+<div *ngIf= "heroeBorrado; else noBorrado">
+    <h3>HEROE BORRADO</h3>
+    <small>
+        {{ heroeBorrado }}
+    </small> 
+</div>
+<!--Contenido propio de angular referencias locales ejemplos del lado del template #noBorrado-->
+
+<ng-template #noBorrado>
+    <h3>No ha borrado nada</h3>
+</ng-template>
+
+<ul>
+    <li *ngFor = "let heroe of heroes">
+        {{ heroe }}
+    </li>
+  </ul>
+
+  <button (click)="BorrarHeroe()"> Borrar </button>
+
