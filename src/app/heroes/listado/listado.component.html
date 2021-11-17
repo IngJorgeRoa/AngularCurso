@@ -1,25 +1,22 @@
-<p>listado works!</p>
+<p>Listado de Héroes</p>
 
-<!--directivas para cambiar y manipular el DOM de una manera facil-->
-
-
-<div *ngIf= "heroeBorrado; else noBorrado">
-    <h3>HEROE BORRADO</h3>
-    <small>
-        {{ heroeBorrado }}
-    </small> 
+<div *ngIf="heroeBorrado; else noBorrado">
+    <h3>Héroe borrado: <small>{{ heroeBorrado }}</small> </h3>
 </div>
-<!--Contenido propio de angular referencias locales ejemplos del lado del template #noBorrado-->
 
 <ng-template #noBorrado>
-    <h3>No ha borrado nada</h3>
+    <h3>No ha borrado nada.</h3>
 </ng-template>
 
-<ul>
-    <li *ngFor = "let heroe of heroes">
-        {{ heroe }}
-    </li>
-  </ul>
 
-  <button (click)="BorrarHeroe()"> Borrar </button>
+<button (click)="borrarHeroe()">
+    Borrar
+</button>
+
+
+<ul>
+    <li *ngFor="let heroe of heroes; let i = index"> 
+        {{ i + 1 }} - {{ heroe }}
+    </li>
+</ul>
 

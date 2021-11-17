@@ -3,16 +3,16 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-listado',
   templateUrl: './listado.component.html',
-  styleUrls: ['./listado.component.css']
 })
-export class ListadoComponent{
+export class ListadoComponent {
 
-  heroes: string[] = ['JORGE', 'KARLA','GREGORIO', 'CAPITAN AMERICA'];
-  
+  heroes: string[] = ['Spiderman','Ironman','Hulk','Thor','Capitán América'];
   heroeBorrado: string = '';
 
-  BorrarHeroe(){
-    this.heroeBorrado =   this.heroes.shift() || ''; 
+  borrarHeroe() {
+    this.heroeBorrado = this.heroes.shift() || '';
   }
 
+
 }
+
